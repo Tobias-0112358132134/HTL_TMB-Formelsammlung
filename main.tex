@@ -96,7 +96,7 @@
 
 \raggedright
 \footnotesize
-\begin{multicols}{3}
+\begin{multicols*}{3}
 
 
 % multicol parameters
@@ -221,7 +221,7 @@ Normalspannung Nullinie:
 
 \subsubsection{Knickung}
 Knickung nach Euler:\\
-\includegraphics[width=6cm]{2-3-5_Knickfälle}
+\includegraphics[width=7cm]{2-3-5_Knickfälle}
 \begin{itemize}[leftmargin=*]
         \item [] $F_K=\frac{\pi^2\cdot E\cdot I}{L_K^2}\qquad\qquad$ Knicksicherheit $S=\frac{F_K}{F}$\\
         \item [] $\sigma_K=\frac{F_k}{A}=\frac{\pi^2\cdot E\cdot I}{L_K^2\cdot A}=\frac{\pi^2\cdot E}{\lambda^2}$\\
@@ -237,6 +237,7 @@ Knickung nach Euler:\\
         \end{math}
 \end{itemize}
 
+\vfill\null
 \columnbreak
 %---------------------------------------------------------------------------
 
@@ -251,16 +252,16 @@ Knickung nach Tetmajr:\\
 
 \subsubsection{Schub infolge Querkraft}
 \begin{itemize}[leftmargin=*]
-        \item [] $\tau_S=\frac{F_Q\cdot s_x}{I_x\cdot b_{(z)}}\qquad\qquad\tau_\text{max}=\frac{4}{3}\cdot\tau_\text{mittel}$
+        \item [] $\tau_S=\frac{F_Q\cdot s_x}{I^{S_\text{ges}}_x\cdot b(z)}\qquad\qquad\tau_\text{max}=\frac{4}{3}\cdot\tau_\text{mittel}$
         \item [] $s_x=A_{\text{Rest}}\cdot z_{\text{Rest}}$
-        \item [] $F_N=\tau_s\cdot b_{(z)}\cdot l_N$
+        \item [] $F_N=\tau_s\cdot b(z)\cdot l_N$
 \end{itemize}
 \includegraphics[width=5cm]{2-4_Schub-infolge-Querkraft}
 
 \subsubsection{Torsion}
 \begin{itemize}[leftmargin=*]
         \item [] $\tau_T=\frac{M_T}{W_T}=\frac{M_T}{I_p}\cdot z$\tabto{3.5cm}{\scriptsize$z$ ...Schwerpunktabstand}
-        \item [] $\phi=\frac{M_T\cdot l}{I_p\cdot G}\qquad\qquad[\phi]=rad$
+        \item [] $\phi=\frac{M_T\cdot l}{G\cdot I_p}\qquad\qquad[\phi]=rad$
 \end{itemize}
 polare Flächenträgheitsmomente und Widerstandsmomente:
 \begin{itemize}[leftmargin=*]
@@ -292,7 +293,7 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \begin{itemize}[leftmargin=*]
         \item [] $W''(x)=-\frac{M(x)}{E\cdot I}$
         \item [] $W'(x)=\int{W''(x)}+c_1$
-        \item [] $W(x)=\int{W'(x)}+c_2$
+        \item [] $W(x)=\int{W'(x)}+c_2=\int{W''(x)}+c_1\cdot x+c_2$
         \item [] {\scriptsize Variablen/-anzahl und Gleichungen/-anzahl Dokumentieren}
 \end{itemize}
 \includegraphics[width=9cm]{2-8_Biegelinie-Krümmung-Vorzeichen}
@@ -358,11 +359,10 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \section{Thermodynamik}
 \subsection{ideales Gas}
 \begin{itemize}[leftmargin=*]
-        \item [] $p\cdot V=m\cdot R\cdot T$
-        \item [] $p\cdot v=R\cdot T$
+        \item [] $p\cdot V=m\cdot R\cdot T\qquad\qquad p\cdot v=R\cdot T$
         \item [] $R=\frac{8314}{M}\qquad\left[R\right]=\frac{\text{J}}{\text{kg}\cdot\text{K}}$
-        \item [] $\kappa=\frac{c_p}{c_v}$
-        \item [] $R=c_p-c_v$
+        \item [] $\kappa=\frac{c_p}{c_v}\qquad R=c_p-c_v$
+        \item [] $\quad\Rightarrow\quad c_v=\frac{R}{\kappa-1}\qquad c_p=\frac{R\cdot\kappa}{\kappa-1}$
 \end{itemize}
 
 \subsection{Hauptsätze der Thermodynamik}
@@ -374,7 +374,7 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] Arbeit - geschlossenes System:\\
                 $A_v=-\int_{1}^{2}{p\cdot dV}$
         \item [] Arbeit - offenes System:\\
-                $A_t=\int_{1}^{2}{V\cdot dp=H_2-H1-Q_a}$
+                $A_t=\int_{1}^{2}{V\cdot dp=H_2-H_1-Q_a}$
         \item [] Wärme:\\
                 $dQ=dU+p\cdot dV=dH-V\cdot dp$\tabto{5cm}
                 $h=u+p\cdot v$
@@ -384,27 +384,27 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 %---------------------------------------------------------------------------
 
 \subsection{Zustandsänderungen ideales Gas}
-%[!]TODO: Bilder/Diagramme einfügen
+\includegraphics[width=6cm]{4-3_Zustandsänderungen}
 \begin{itemize}[leftmargin=*]
-        \item [] \textbf{Isochor:} $V_1=V_2$
+        \item [] \textbf{Isochor:} \fbox{$V_1=V_2$} $\qquad n=\infty$
         \subitem $\frac{p_1}{p_2}=\frac{T_1}{T_2}$
-        \subitem $q_{12}=c_v\cdot(T_2-T_1)$
+        \subitem $q_{12}=u_{12}=c_v\cdot(T_2-T_1)$
         \subitem $a_t=R\cdot(T_2-T_1)=v\cdot(p_2-p_1)$
         \subitem $a_v=0$
         \subitem $s_{12}=c_v\cdot\ln{\left(\frac{T_2}{T_1}\right)}$
-        \item [] \textbf{Isobar:} $p_1=p_2$
-        \subitem $\frac{V_1}{V_2}=\frac{T_1}{T_2}$
-        \subitem $q_{12}=c_p\cdot(T_2-T_1)\qquad\rightarrow\text{für Dampf: }q_{12}=\Delta{h}$
+        \item [] \textbf{Isobar:} \fbox{$p_1=p_2$} $\qquad n=0$
+        \subitem $\frac{V_1}{V_2}=\frac{v_1}{v_2}=\frac{T_1}{T_2}$
+        \subitem $q_{12}=h_{12}=c_p\cdot(T_2-T_1)\qquad\rightarrow\text{für Dampf: }q_{12}=h_{12}$
         \subitem $a_t=0$
         \subitem $a_v=-R\cdot(T_2-T_1)=-p\cdot(v_2-v_1)$
         \subitem $s_{12}=c_p\cdot\ln{\left(\frac{T_2}{T_1}\right)}$
-        \item [] \textbf{Isotherm:} $T_1=T_2$
-        \subitem $\frac{p_1}{p_2}=\frac{V_2}{V_1}$
-        \subitem $q_{12}=R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}$
-        \subitem $a_t=-q_{12}=R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}$
-        \subitem $a_v=a_t=-q_{12}=R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}$
+        \item [] \textbf{Isotherm/Isenthalp:} \fbox{$T_1=T_2$}$\quad$\&$\quad$\fbox{$h_{12}=0$} $\qquad n=1$
+        \subitem $\frac{p_1}{p_2}=\frac{v_2}{v_1}=\frac{V_2}{V_1}$
+        \subitem $q_{12}=R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}=-R\cdot T\cdot\ln{\left(\frac{v_1}{v_2}\right)}$
+        \subitem $a_t=a_v=-q_{12}=-R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}=R\cdot T\cdot\ln{\left(\frac{v_1}{v_2}\right)}$
+        \subitem $a_v=a_t=-q_{12}=-R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}=R\cdot T\cdot\ln{\left(\frac{v_1}{v_2}\right)}$
         \subitem $s_{12}=R\cdot\ln{\left(\frac{p_1}{p_2}\right)}$
-        \item [] \textbf{Isentrop:} $S_1=S_2$
+        \item [] \textbf{Isentrop:} \fbox{$S_1=S_2$}$\qquad n=\kappa\quad${\scriptsize(adiabat \& reibungsfrei)}
         \subitem $p_1\cdot v_1^\kappa=p_2\cdot v_2^\kappa$
         \subitem $q_{12}=0$
         \subitem $a_t=c_p\cdot(T_2-T_1)$
@@ -412,16 +412,20 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \subitem $s_{12}=0$
         \subitem $\frac{T_2}{T_1}=\left(\frac{p_1}{p_2}\right)^{\frac{1-\kappa}{\kappa}}=\left(\frac{p_2}{p_1}\right)^{\frac{\kappa-1}{\kappa}}=\left(\frac{v_1}{v_2}\right)^{\kappa-1}$
         \subitem $\kappa=\frac{a_t}{a_v}=\frac{c_p}{c_v}$
+
+\columnbreak
+%---------------------------------------------------------------------------
+
         \item [] \textbf{Polytrop:}
-        \subitem $p_1\cdot v_1^n=p_2\cdot v_2^n\quad\longrightarrow\quad n=\frac{ln{\left(\frac{p_1}{p_2}\right)}}{\ln{\left(\frac{v_2}{v_1}\right)}}$
+        \subitem $p_1\cdot v_1^n=p_2\cdot v_2^n\quad\longrightarrow\quad n=\frac{ln{\left(\frac{p_1}{p_2}\right)}}{\ln{\left(\frac{v_2}{v_1}\right)}}=\frac{a_t}{a_v}$
         \subitem $q_{12}=c_v\cdot\frac{n-\kappa}{n-1}\cdot(T_2-T_1)=\frac{n-\kappa}{(n-1)\cdot(\kappa-1)}\cdot R\cdot(T_2-T_1)$
         \subitem $a_t=\frac{n}{n-1}\cdot R\cdot(T_2-T_1)=a_v\cdot n$
-        \subitem $a_v=\frac{R}{n-1}\cdot(T_2-T_1)$
+        \subitem $a_v=\frac{R}{n-1}\cdot(T_2-T_1)=\frac{a_t}{n}$
         \subitem $s_{12}=c_v\cdot\frac{n-\kappa}{n-1}\cdot\ln{\left(\frac{T_2}{T_1}\right)}=\frac{R}{\kappa-1}\cdot\frac{n-\kappa}{n-1}\cdot\ln{\left(\frac{T_2}{T_1}\right)}$
         \subitem Expansion:\tabto{2.4cm}$n<\kappa\longrightarrow$ Wäreme\textbf{zu}fuhr
                            \tabto{2.4cm}$n>\kappa\longrightarrow$ Wäreme\textbf{ab}fuhr
         \subitem Kompression:\tabto{2.4cm}$n>\kappa\longrightarrow$ Wäreme\textbf{zu}fuhr
-                           \tabto{2.4cm}$n<\kappa\longrightarrow$ Wäreme\textbf{ab}fuhr
+                             \tabto{2.4cm}$n<\kappa\longrightarrow$ Wäreme\textbf{ab}fuhr
 \end{itemize}
 
 \subsection{spezifische Wärmekapazitäten}
@@ -430,39 +434,38 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] $dh=c_p\cdot dT$
 \end{itemize}
 
-\columnbreak
-%---------------------------------------------------------------------------
-
-\subsection{Kresiprozesse}
+\subsection{Kreisprozesse}
 \begin{itemize}[leftmargin=*]
         \item [] \textbf{Rechtsläufige Kreisprozesse:}\\
         $\eta_{th}=\frac{|A|}{Q_{zu}}=\frac{q_{zu}-|q_{ab}|}{q_{zu}}\qquad\quad A_{KP}=-(Q_{zu}-|Q_{ab}|)\qquad\quad P=A\cdot\dot{m}$
         \item [] \textbf{Isentrope Wirkungsgrade:}\\
         $\eta_{is\text{V}}=\frac{h_{2s}-h_1}{h_2-h_1}$\tabto{2.5cm}$\eta_{is\text{T}}=\frac{h_2-h_1}{h_{2s}-h_1}$\\ \\
         {\scriptsize$\quad$ für ideales Gas $\rightarrow\quad\eta_{is\text{V}}=\frac{T_{2s}-T_1}{T_2-T_1}\quad\eta_{is\text{T}}=\frac{T_2-T_1}{T_{2s}-T_1}$}
-        \item [] \textbf{Linksläufige Kresiprozesse:}\\
+        \item [] \textbf{Linksläufige Kreisprozesse:}\\
         $\epsilon_{KM}=\frac{q_{zu}}{q_{ab}-q_{zu}}$\tabto{2.5cm}$\epsilon_{WP}=\frac{q_{ab}}{q_{ab}-q_{zu}}$
         %[!]TODO: "KM" und "WP"?? ^^
         \item [] \textbf{Dampfprozesse:}\\
-        kein $c_p\cdot\Delta{T}\quad\Rightarrow$ Tabelle\\
-        $q=\Delta{h}$
+        kein $h_{12}=c_p\cdot T_{12}\quad\Rightarrow$ Tabelle\\
+        $q_{12}=h_{12}$
 \end{itemize}
-\includegraphics[width=4cm]{4-5_Nassdampfkurve}
 
 \subsection{Nassdampf}
-%[!]TODO: Bilder/Diagramme einfügen
+\includegraphics[width=4cm]{4-5_Nassdampfkurve}
 \begin{itemize}[leftmargin=*]
         \item [] $h(x)=h'+x\cdot(h''-h')=h'+x\cdot r$
         \item [] $v(x)=v'+x\cdot(v''-v')$
         \item [] $s(x)=s'+x\cdot(s''-s')$
+        \item [] unter der Nassdampfkurve gilt \textbf{nicht} $h_{12}=c_p\cdot (T_2-T_1))$
 \end{itemize}
+
+\columnbreak
+%---------------------------------------------------------------------------
 
 \subsubsection{Kreisprozesse Skizzen}
 \begin{itemize}[leftmargin=*]
-        %[!]TODO: Anmerkungen zu c_p * Delta T = ??
-        \item [] \textbf{Dampfprozess:} (kein $c_p\cdot\Delta{T}$)\\\includegraphics[width=6cm]{4-6-1_Dampfprozess}
-        \item [] \textbf{Kälteprozess:}\\\includegraphics[width=6cm]{4-6-1_Kälteprozess}
-        \item [] \textbf{Joule-Prozess:} ($c_p\cdot\Delta{T}$ gilt wieder)\\\includegraphics[width=4.5cm]{4-6-1_Joule-Prozess}
+        \item [] \textbf{Dampfprozess:} (beispielhaft)\\\includegraphics[width=8cm]{4-6-1_Dampfprozess}
+        \item [] \textbf{Kälteprozess:} (beispielhaft)\\\includegraphics[width=8cm]{4-6-1_Kälteprozess}
+        \item [] \textbf{Joule-Prozess:}\\\includegraphics[width=6cm]{4-6-1_Joule-Prozess}
 \end{itemize}
 
 \subsection{Schmelzen}
@@ -471,10 +474,6 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \begin{itemize}[leftmargin=*]
         \item [] $m_i\cdot c_i\cdot\Delta{T}+m_i\cdot q_s+m_i\cdot c_s\cdot T_M=m_s\cdot c_s\cdot(T_s-T_K)$
 \end{itemize}
-
-
-\columnbreak
-%---------------------------------------------------------------------------
 
 \section{Kinematik}
 \subsection{Grundgleichungen}
@@ -496,6 +495,9 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] $\vec{v_B}=\vec{v_A}+\vec{v_{AB}}$
         \item [] $\vec{a_B}=\vec{a_A}+\vec{a_{AB}}$
 \end{itemize}
+
+\columnbreak
+%---------------------------------------------------------------------------
 
 \section{Kinetik}
 \subsection{Dynamik}
@@ -519,9 +521,6 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] \textbf{Leistung:}\\$P=F\cdot v=M\cdot\omega=\frac{F\cdot s}{t}$
 \end{itemize}
 
-\columnbreak
-%---------------------------------------------------------------------------
-
 \subsection{Impuls \& Stoß}
 \textbf{Impulserhaltung:}\tabto{3cm}$m_1\cdot\vec{v_1}=m_2\cdot\vec{v_2}=\text{konst.}$\\
 \textbf{Stoß:}
@@ -536,6 +535,8 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] $E_\text{kin0}E_\text{pot0}-E_v=E_\text{kin1}E_\text{pot1}\qquad\qquad E_v$ ...Verformungsenergie
 \end{itemize}
 
+\columnbreak
+
 \subsection{Schwingungen}
 \textbf{freie ungedämpfte Schwingung}
 \begin{itemize}[leftmargin=*]
@@ -545,6 +546,9 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] $\quad\longrightarrow\quad C=\sqrt{A^2+B^2}$
         \item [] $\quad\longrightarrow\quad\psi=\arctan\left(\frac{A}{B}\right)$
 \end{itemize}
+
+\vspace{20pt}
+
 \textbf{freie gedämpfte Schwingung}
 \begin{itemize}[leftmargin=*]
         \item [] $\ddot{\variant{x}}+2\delta\cdot\dot{\variant{x}}+\omega^2\cdot\variant{x}=0$
@@ -561,6 +565,11 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] aperiodischer Grenzfall: \fbox{$\delta^2=\omega^2$}
         \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot(A+B\cdot t)$
 \end{itemize}
+
+\par\vspace{150pt}\null
+\columnbreak
+%---------------------------------------------------------------------------
+
 \textbf{erzwungene Schwingung}
 \begin{itemize}[leftmargin=*]
         \item [] $\ddot{\variant{x}}+2\delta\cdot\dot{\variant{x}}+\omega^2\cdot\variant{x}=A_e\cdot\sin(\Omega\cdot t)$\tabto{5.26cm}oder$\quad\dots=A_e\cdot\cos(\Omega\cdot t)$
@@ -569,11 +578,19 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] $\quad\longrightarrow\quad A=\frac{A_e}{\sqrt{(\omega^2-\Omega^2)^2+4\cdot\delta^2\cdot\Omega}}$
         \item [] $\quad\longrightarrow\quad\psi=\arctan(\frac{2\cdot\delta\cdot\Omega}{\omega^2-\Omega^2})\qquad$ für $\psi<0$: $\quad\psi_{neu}=\psi+\pi$
 \end{itemize}
+
+\vspace{20pt}
+
 \textbf{Federschaltungen}
 \begin{itemize}[leftmargin=*]
         \item [] $c_\text{ers,parallel}=\sum_{i}^{n}c_i=c_1+c_2+\cdots$
         \item [] $c_\text{ers,seriell}=\frac{1}{\sum_{i}^{n}\frac{1}{c_i}}=\frac{1}{\frac{1}{c_1}+\frac{1}{c_2}+\cdots}$
 \end{itemize}
+
+\par\vfill\null
+\columnbreak
+%---------------------------------------------------------------------------
+
 
 
 % \rule{0.3\linewidth}{0.25pt}
@@ -583,5 +600,5 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 % Copyright \copyright\ 2023 Tobias Mittermair
 
 
-\end{multicols}
+\end{multicols*}
 \end{document}
