@@ -58,7 +58,7 @@
 
 % Turn off header and footer
 \pagestyle{plain}
-\pagenumbering{arabic}
+%\pagenumbering{arabic}
 
 
 % Redefine section commands to use less space
@@ -106,6 +106,13 @@
 \setlength{\postmulticols}{1pt}
 \setlength{\multicolsep}{1pt}
 \setlength{\columnsep}{2pt}
+
+% page for TOC
+% exclude from numbering
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
 
 \begin{center}
      \Large{\textbf{TMB Formelsammlung}} \\
