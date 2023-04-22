@@ -114,7 +114,7 @@
 \section{Statik}
 
 \subsection{Grundgleichungen der Statik}
-$\sum{F_x}=0$; $\sum{F_y}=0$; $\sum{M^P}=0$
+\tabto{0.35cm}$\sum{F_x}=0\qquad\sum{F_y}=0\qquad\sum{M^P}=0$
 
 \subsection{Trigonometrische Sätze}
 \begin{itemize}[leftmargin=*]
@@ -175,6 +175,12 @@ $\sum{F_x}=0$; $\sum{F_y}=0$; $\sum{M^P}=0$
         \item [] Dreieck\tabto{2cm} $I_{x_\lrtriangle}=\frac{b\cdot h^3}{36}$\tabto{3.7cm}$I_{xy_\lrtriangle}=\frac{b^2\cdot h^2}{72}$
 \end{itemize}
 
+\subsubsection{Schnittgrößen}
+\tabto{0.35cm}$Q(x_i)=Q_0\pm\int_0^{x_i}{q(x)\cdot dx}$\tabto{4.5cm}$Q(x_{M_\text{max}})=0\quad\longrightarrow\quad x_{M_\text{max}}$
+\tabto{0.35cm}$M(x_i)=M_0\mp\int_0^{x_i}{Q(x)\cdot dx}$\tabto{4.5cm}$M_\text{max}=M(x_{M_\text{max}})$
+\tabto{0.35cm}$M_\text{Streckenl.}(x_i)=\int_{0}^{x_i}{q(x)\cdot x\cdot dx}$
+
+\columnbreak
 %---------------------------------------------------------------------------
 
 \subsubsection{Schiefe Biegung}
@@ -184,7 +190,7 @@ Drehung des Kooridnatsystems um den Schwepunkt:
         \item [] $I_\zeta=\frac{I_y+I_z}{2}+\frac{I_y-I_z}{2}\cdot\cos(2\cdot\phi)-I_{yz}\cdot\sin(2\cdot\phi)$
         \item [] $I_{\eta\zeta}=-\frac{I_y-I_z}{2}\cdot\sin(2\cdot\phi)+I_{yz}\cdot\cos(2\phi)$
 \end{itemize}
-\includegraphics[width=2cm]{2-3-4_Drehung-des-Koordinatensystems}
+\includegraphics[width=2cm]{2-3-5_Drehung-des-Koordinatensystems}
 
 Richtungswinkel gegen den Uhrzeigersinn:
 \begin{itemize}[leftmargin=*]
@@ -221,7 +227,7 @@ Normalspannung Nullinie:
 
 \subsubsection{Knickung}
 Knickung nach Euler:\\
-\includegraphics[width=7cm]{2-3-5_Knickfälle}
+\includegraphics[width=7cm]{2-3-6_Knickfälle}
 \begin{itemize}[leftmargin=*]
         \item [] $F_K=\frac{\pi^2\cdot E\cdot I}{L_K^2}\qquad\qquad$ Knicksicherheit $S=\frac{F_K}{F}$\\
         \item [] $\sigma_K=\frac{F_k}{A}=\frac{\pi^2\cdot E\cdot I}{L_K^2\cdot A}=\frac{\pi^2\cdot E}{\lambda^2}$\\
@@ -237,7 +243,6 @@ Knickung nach Euler:\\
         \end{math}
 \end{itemize}
 
-\vfill\null
 \columnbreak
 %---------------------------------------------------------------------------
 
@@ -596,11 +601,14 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \vfill
 
 
-\tabto{6.5cm}\rule{0.3\linewidth}{0.25pt}\\
+\tabto{6.3cm}\rule{0.3\linewidth}{0.25pt}\\
 \tiny
-\tabto{6.5cm}\href{http://wch.github.io/latexsheet/}{http://wch.github.io/latexsheet/}\\
-\tabto{6.5cm}Copyright \copyright\ 2014 Winston Chang\\
-\tabto{6.5cm}Copyright \copyright\ 2023 Tobias Mittermair
+\tabto{6.3cm}\href{http://wch.github.io/latexsheet/}{http://wch.github.io/latexsheet/}\\
+\tabto{6.3cm}Copyright \copyright\ 2014 Winston Chang\\
+\tabto{6.3cm}Copyright \copyright\ 2023 Tobias Mittermair
+\begin{flushright}
+        {\normalsize V1.1}\\
+\end{flushright}
 
 
 \end{multicols*}
