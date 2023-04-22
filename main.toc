@@ -11,8 +11,9 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Zug und Druck}{1}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Biegung}{1}{subsubsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.3}Flächenträgheitsmomente}{1}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Schiefe Biegung}{1}{subsubsection.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.3.5}Knickung}{1}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.4}Schnittgrößen}{1}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Schiefe Biegung}{1}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}Knickung}{1}{subsubsection.2.3.6}%
 \contentsline {subsection}{\numberline {2.4}Querspannungen}{1}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}Abscherung}{1}{subsubsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.2}Schub infolge Querkraft}{1}{subsubsection.2.4.2}%
