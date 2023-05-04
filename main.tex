@@ -537,7 +537,7 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \subitem {\scriptsize $v_i$\tabto{1cm}...Geschwindigkeit von Masse $i$ vor dem Stoß}
         \subitem {\scriptsize $v_i'$\tabto{1cm}...Geschwindigkeit von Masse $i$ nach dem Stoß}
         \subitem {\scriptsize $u$\tabto{1cm}...gemeinsame Geschwindigkeit während der Kompressionsphase}
-        \item [] $E_\text{kin0}E_\text{pot0}-E_v=E_\text{kin1}E_\text{pot1}\qquad\qquad E_v$ ...Verformungsenergie
+        \item [] $E_\text{kin0}+E_\text{pot0}-E_v=E_\text{kin1}+E_\text{pot1}\qquad\qquad E_v$ ...Verformungsenergie
 \end{itemize}
 
 \columnbreak
@@ -558,7 +558,7 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \begin{itemize}[leftmargin=*]
         \item [] $\ddot{\variant{x}}+2\delta\cdot\dot{\variant{x}}+\omega^2\cdot\variant{x}=0$
         \item [] schwache Dämpfung: \fbox{$\delta^2<\omega^2$}
-        \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot A\cdot\sin(\omega_d\cdot t)+B\cdot\cos(\omega_d\cdot t)\qquad$
+        \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot\left( A\cdot\sin(\omega_d\cdot t)+B\cdot\cos(\omega_d\cdot t)\right)$
         \subitem \tabto{1.8cm}bzw.
         \subitem $\variant{x}(t)=C\cdot e^{-\delta\cdot t}\cdot\sin(\omega_d\cdot t+\psi)$
         \subitem $\quad\longrightarrow\quad\omega_d=\sqrt{\omega^2-\delta^2}$
@@ -566,7 +566,7 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \subitem $\quad\longrightarrow\quad C=\sqrt{A^2+B^2}$
         \subitem $\quad\longrightarrow\quad\psi=\arctan\left(\frac{A}{B}\right)$
         \item [] starke Dämpfung: \fbox{$\delta^2>\omega^2$}
-        \subitem subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot\left(A\cdot e^{\sqrt{\delta^2-\omega^2}\cdot t}+B\cdot e^{\sqrt{\delta^2-\omega^2}\cdot t}\right)$
+        \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot\left(A\cdot e^{\sqrt{\delta^2-\omega^2}\cdot t}+B\cdot e^{\sqrt{\delta^2-\omega^2}\cdot t}\right)$
         \item [] aperiodischer Grenzfall: \fbox{$\delta^2=\omega^2$}
         \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot(A+B\cdot t)$
 \end{itemize}
@@ -607,7 +607,7 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \tabto{6.3cm}Copyright \copyright\ 2014 Winston Chang\\
 \tabto{6.3cm}Copyright \copyright\ 2023 Tobias Mittermair
 \begin{flushright}
-        {\normalsize V1.1}\\
+        {\normalsize V1.3}\\
 \end{flushright}
 
 
