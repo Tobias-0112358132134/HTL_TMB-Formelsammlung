@@ -7,9 +7,7 @@
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{stix}
 \usepackage{tabto}
-\usepackage{scalerel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
@@ -107,13 +105,6 @@
 \setlength{\multicolsep}{1pt}
 \setlength{\columnsep}{2pt}
 
-% page for TOC
-% exclude from numbering
-\thispagestyle{empty}
-\tableofcontents
-\newpage
-\pagenumbering{arabic}
-
 \begin{center}
      \Large{\textbf{TMB Formelsammlung}} \\
 \end{center}
@@ -127,23 +118,23 @@
 \begin{itemize}[leftmargin=*]
         \item[] Sinussatz\tabto{2cm} $\frac{a}{\sin(\alpha)}=\frac{b}{\sin(\beta)}=\frac{c}{\sin(\gamma)}$
         \item[] Kosinussatz\tabto{2cm} $c^2=a^2+b^2-2\cdot a\cdot b\cdot\cos(\gamma)$
-        \item[] Summensätze\tabto{2cm} $\sin(\alpha)\cdot\cos(\alpha)=\sin(2\cdot\alpha)$
+        \item[] Summensätze\tabto{2cm} $2\cdot\sin(\alpha)\cdot\cos(\alpha)=\sin(2\cdot\alpha)$
         \item[] \tabto{2cm} $\sin(\alpha+\beta)=\sin(\alpha)\cdot\cos(\beta)+\sin(\beta)\cdot\cos(\alpha)$
         \item[] \tabto{2cm} $\cos(\alpha+\beta)=\cos(\alpha)\cdot\cos(\beta)-\sin(\beta)\cdot\sin(\alpha)$
 \end{itemize}
 
 \subsection{Standsicherheit}
 \begin{itemize}[leftmargin=*]
-        \item [] $\sum M_{Stand}=s_f\cdot\sum M_{Kipp}$
-        \tabto{4cm}{\scriptsize$s_f$ ...Sicherheit gegen Kippen}
+        \item [] $\sum M_\text{Stand}=s_\text{f}\cdot\sum M_\text{Kipp}$
+        \tabto{4cm}{\scriptsize$s_\text{f}$ ...Sicherheit gegen Kippen}
 \end{itemize}
 
 \subsection{Reibung}
 \begin{itemize}[leftmargin=*]
-        \item[] Haftreibung\tabto{2cm} $F_{R_{max}}=F_N\cdot\mu$\tabto{4.5cm}{\scriptsize wenn $v=0$, $F_R$ aus\\
+        \item[] Haftreibung\tabto{2cm} $F_{\text{R,max}}=F_\text{N}\cdot\mu$\tabto{4.5cm}{\scriptsize wenn $v=0$, $F_\text{R}$ aus\\
                                                                 \tabto{4.5cm}Gleichgewichtsbedingungen}
-        \item[] Gleitreibung\tabto{2cm} $F_R=F_N\cdot\mu$
-        \item[] Seilreibung\tabto{2cm} $F_z\le F_h\cdot e^{\mu\cdot\alpha}$\tabto{4.5cm}{\scriptsize$\alpha$ ...Winkel in $rad$}\\
+        \item[] Gleitreibung\tabto{2cm} $F_\text{R}=F_\text{N}\cdot\mu$
+        \item[] Seilreibung\tabto{2cm} $F_\text{z}\le F_\text{h}\cdot e^{\mu\cdot\alpha}$\tabto{4.5cm}{\scriptsize$\alpha$ ...Winkel in $rad$}\\
 \end{itemize}
 
 
@@ -158,12 +149,13 @@
         \tabto{2.7cm}$I_z=\int y^2\cdot dA$
         \item [] Deviationsmomente\tabto{2.7cm} $I_{yz}=\int y\cdot z\cdot dA$\\
         \tabto{2.7cm}{\scriptsize negatives Vorzeichen in SE}
-        \item [] polares Widerstandsmoment\tabto{4cm} $I_p=I_x+I_y$
+        \item [] polares Flächenmoment\tabto{3.4cm} $I_\text{p}=I_y+I_z$
 \end{itemize}
 
 \subsection{Satz von Steiner}
 \begin{itemize}[leftmargin=*]
-        \item [] $I_y^P=I_y^S+A\cdot y^2$\makebox[1.36cm]{\hfill}$I_y^S=I_y^P-A\cdot y^2$
+        \item [] $I_y^P=I_y^S+A\cdot z^2$\makebox[1.36cm]{\hfill}$I_y^S=I_y^P-A\cdot z^2$
+        \item [] $I_z^P=I_z^S+A\cdot y^2$
         \item [] $I_{yz}^P=I_{yz}^S-A\cdot y\cdot z$\makebox[1cm]{\hfill}$I_{yz}^S=I_{yz}^P+A\cdot y\cdot z$
         \item [] {\scriptsize festlegen:$\quad\Delta{y}=y_{S_\text{einzel}}-y_{S_\text{ges}}$}
 \end{itemize}
@@ -173,13 +165,13 @@
 \subsubsection{Zug und Druck}
 \tabto{0.35cm}$\sigma_\text{Z/D}=\frac{F_\text{Z/D}}{A}=E\cdot\epsilon=E\cdot\frac{\Delta l}{l_0}$
 \subsubsection{Biegung}
-\tabto{0.35cm}$\sigma_B=\frac{M_B}{W_B}=\frac{M_B}{I}\cdot z$\tabto{3.5cm}{\scriptsize$z$ ...Schwerpunktabstand}
+\tabto{0.35cm}$\sigma_\text{B}=\frac{M_\text{B}}{W_\text{B}}=\frac{M_\text{B}}{I}\cdot z$\tabto{3.5cm}{\scriptsize$z$ ...Schwerpunktabstand}
 \subsubsection{Flächenträgheitsmomente}
 \begin{itemize}[leftmargin=*]
         \item [] Rechteck\tabto{2cm} $I_{x_\square}=\frac{h^3\cdot b}{12}$
         \item [] Kreis\tabto{2cm} $I_{x_\circ}=\frac{d^4\cdot\pi}{64}$
         \item [] Kreisring\tabto{2cm} $I_\text{KR}=\frac{(D^4-d^4)\cdot\pi}{64}$
-        \item [] Dreieck\tabto{2cm} $I_{x_\lrtriangle}=\frac{b\cdot h^3}{36}$\tabto{3.7cm}$I_{xy_\lrtriangle}=\frac{b^2\cdot h^2}{72}$
+        \item [] Dreieck\tabto{2cm} $I_{x_\triangle}=\frac{b\cdot h^3}{36}$\tabto{3.7cm}$I_{xy_\triangle}=\frac{b^2\cdot h^2}{72}$
 \end{itemize}
 
 \subsubsection{Schnittgrößen}
@@ -191,7 +183,7 @@
 %---------------------------------------------------------------------------
 
 \subsubsection{Schiefe Biegung}
-Drehung des Kooridnatsystems um den Schwepunkt:
+Drehung des Koordinatensystems um den Schwerpunkt:
 \begin{itemize}[leftmargin=*]
         \item [] $I_\eta=\frac{I_y+I_z}{2}+\frac{I_y-I_z}{2}\cdot\cos(2\cdot\phi)+I_{yz}\cdot\sin(2\cdot\phi)$
         \item [] $I_\zeta=\frac{I_y+I_z}{2}+\frac{I_y-I_z}{2}\cdot\cos(2\cdot\phi)-I_{yz}\cdot\sin(2\cdot\phi)$
@@ -213,17 +205,17 @@ Richtungswinkel gegen den Uhrzeigersinn:
 
 Maximales Flächenmoment:
 \begin{itemize}[leftmargin=*]
-        \item [] $I_{HA}=I_1=\frac{I_y+I_z}{2}+\sqrt{\left(\frac{I_y-I_z}{2}\right)^2+I_{yz}^2}$
+        \item [] $I_\text{HA}=I_1=\frac{I_y+I_z}{2}+\sqrt{\left(\frac{I_y-I_z}{2}\right)^2+I_{yz}^2}$
 \end{itemize}
 
 Minimales Flächenmoment:
 \begin{itemize}[leftmargin=*]
-        \item [] $I_{NA}=I_2=\frac{I_y+I_z}{2}-\sqrt{\left(\frac{I_y-I_z}{2}\right)^2+I_{yz}^2}$
+        \item [] $I_\text{NA}=I_2=\frac{I_y+I_z}{2}-\sqrt{\left(\frac{I_y-I_z}{2}\right)^2+I_{yz}^2}$
 \end{itemize}
 
 Abstandsabhängige Gesamt-Normalspannung:
 \begin{itemize}[leftmargin=*]
-        \item [] $\sigma(y_{HA},z_{HA})=\pm\frac{M_{HA}}{I_1}\cdot z_{HA}\pm\frac{M_{NA}}{I_2}\cdot y_{HA}\pm\frac{F_{Z/D}}{A}$
+        \item [] $\sigma(y_\text{HA},z_\text{HA})=\pm\frac{M_\text{HA}}{I_1}\cdot z_\text{HA}\pm\frac{M_\text{NA}}{I_2}\cdot y_\text{HA}\pm\frac{F_{Z/D}}{A}$
         \item [] $\sigma_x(y,z)=\frac{M_y}{I_{yy}}\cdot z-\frac{M_z}{I_{zz}}\cdot y\pm\frac{F_{Z/D}}{A}$
 \end{itemize}
 
@@ -236,16 +228,16 @@ Normalspannung Nullinie:
 Knickung nach Euler:\\
 \includegraphics[width=7cm]{2-3-6_Knickfälle}
 \begin{itemize}[leftmargin=*]
-        \item [] $F_K=\frac{\pi^2\cdot E\cdot I}{L_K^2}\qquad\qquad$ Knicksicherheit $S=\frac{F_K}{F}$\\
-        \item [] $\sigma_K=\frac{F_k}{A}=\frac{\pi^2\cdot E\cdot I}{L_K^2\cdot A}=\frac{\pi^2\cdot E}{\lambda^2}$\\
+        \item [] $F_\text{K}=\frac{\pi^2\cdot E\cdot I}{L_\text{K}^2}\qquad\qquad$ Knicksicherheit $S=\frac{F_\text{K}}{F}$\\
+        \item [] $\sigma_\text{K}=\frac{F_\text{K}}{A}=\frac{\pi^2\cdot E\cdot I}{L_\text{K}^2\cdot A}=\frac{\pi^2\cdot E}{\lambda^2}$\\
         \item []
         \begin{math}
-                \lambda_G=\sqrt{\pi\cdot\frac{E}{\sigma_{DB}}}\qquad\sigma_{DB}=\sigma\newline
-                \lambda=\sqrt{\frac{L_K^2\cdot A}{I}}=
+                \lambda_\text{G}=\pi\cdot\sqrt{\frac{E}{\sigma_\text{P}}}\qquad\sigma_\text{P}\text{ ...Proportionalitätsgrenze}\newline
+                \lambda=\sqrt{\frac{L_\text{K}^2\cdot A}{I}}=
                 \begin{cases}
                         \text{\scriptsize ...Schlankheitsgrad}\\
-                        >90\textsl{ bzw.} >\lambda_g\rightarrow\text{Euler}\\
-                        \text{ansonsten}\rightarrow\text{Tetmajr oder Quetschen (Zug/Druck)}
+                        >90\textsl{ bzw.} >\lambda_\text{G}\rightarrow\text{Euler}\\
+                        \text{ansonsten}\rightarrow\text{Tetmajer oder Quetschen (Zug/Druck)}
                 \end{cases}
         \end{math}
 \end{itemize}
@@ -253,32 +245,33 @@ Knickung nach Euler:\\
 \columnbreak
 %---------------------------------------------------------------------------
 
-Knickung nach Tetmajr:\\
-\tabto{0.35cm}$\sigma_K=a-b\cdot\lambda+c\cdot\lambda^2$\tabto{3.5cm}{\scriptsize(a, b, c aus Tabelle)}
+Knickung nach Tetmajer:\\
+\tabto{0.35cm}$\sigma_\text{K}=a-b\cdot\lambda+c\cdot\lambda^2$\tabto{3.5cm}{\scriptsize(a, b, c aus Tabelle)}
 %[!]TODO: aus welcher Tabelle?
 
 \subsection{Querspannungen}
 
 \subsubsection{Abscherung}
-\tabto{0.35cm}$\tau_A=\frac{F_Q}{A}$
+\tabto{0.35cm}$\tau_\text{A}=\frac{F_\text{Q}}{A}$
 
 \subsubsection{Schub infolge Querkraft}
 \begin{itemize}[leftmargin=*]
-        \item [] $\tau_S=\frac{F_Q\cdot s_x}{I^{S_\text{ges}}_x\cdot b(z)}\qquad\qquad\tau_\text{max}=\frac{4}{3}\cdot\tau_\text{mittel}$
+        \item [] $\tau_\text{S}=\frac{F_\text{Q}\cdot s_x}{I^{S_\text{ges}}_x\cdot b(z)}\qquad\qquad\tau_\text{max}=\frac{3}{2}\cdot\tau_\text{mittel}$
+        \item [] {\scriptsize $\tau_\text{max}$: Rechteck $\frac{3}{2}\cdot\tau_\text{m}$, Kreis $\frac{4}{3}\cdot\tau_\text{m}$ mit $\tau_\text{m}=\frac{F_\text{Q}}{A}$}
         \item [] $s_x=A_{\text{Rest}}\cdot z_{\text{Rest}}$
-        \item [] $F_N=\tau_s\cdot b(z)\cdot l_N$
+        \item [] $F_\text{N}=\tau_\text{S}\cdot b(z)\cdot l_\text{N}$
 \end{itemize}
 \includegraphics[width=5cm]{2-4_Schub-infolge-Querkraft}
 
 \subsubsection{Torsion}
 \begin{itemize}[leftmargin=*]
-        \item [] $\tau_T=\frac{M_T}{W_T}=\frac{M_T}{I_p}\cdot z$\tabto{3.5cm}{\scriptsize$z$ ...Schwerpunktabstand}
-        \item [] $\phi=\frac{M_T\cdot l}{G\cdot I_p}\qquad\qquad[\phi]=rad$
+        \item [] $\tau_\text{T}=\frac{M_\text{T}}{W_\text{T}}=\frac{M_\text{T}}{I_\text{p}}\cdot z$\tabto{3.5cm}{\scriptsize$z$ ...Schwerpunktabstand}
+        \item [] $\phi=\frac{M_\text{T}\cdot l}{G\cdot I_\text{p}}\qquad\qquad[\phi]=rad$
 \end{itemize}
 polare Flächenträgheitsmomente und Widerstandsmomente:
 \begin{itemize}[leftmargin=*]
-        \item [] Kreis\tabto{1.5cm}$I_{p_\circ}=\frac{d^4\cdot\pi}{32}$\tabto{4cm}$W_{T_\circ}=\frac{d^3\cdot\pi}{16}$
-        \item [] Kreisring\tabto{1.5cm}$I_{p_\text{KR}}=\frac{(D^4-d^4)\cdot\pi}{32}$\tabto{4cm}$W_{T_\circ}=\frac{(D^4-d^4)\cdot\pi}{16\cdot D}$
+        \item [] Kreis\tabto{1.5cm}$I_{\text{p}_\circ}=\frac{d^4\cdot\pi}{32}$\tabto{4cm}$W_{\text{T}_\circ}=\frac{d^3\cdot\pi}{16}$
+        \item [] Kreisring\tabto{1.5cm}$I_{\text{p}_\text{KR}}=\frac{(D^4-d^4)\cdot\pi}{32}$\tabto{4cm}$W_{\text{T}_\text{KR}}=\frac{(D^4-d^4)\cdot\pi}{16\cdot D}$
 \end{itemize}
 
 \subsection{Wärmedehnung}
@@ -289,7 +282,7 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 
 \subsection{Vergleichsspannungen}
 \begin{itemize}[leftmargin=*]
-        \item [] $\tau=\tau\cdot\alpha_0$\tabto{2cm}$\alpha_0=\frac{\sigma_\text{zul.}}{\eta\cdot\tau_\text{zul.}}$\tabto{4cm}$\sigma=\sigma_b\pm\sigma_\text{Z/D}$
+        \item [] $\tau\rightarrow\alpha_0\cdot\tau$ {\scriptsize in den Formeln unten}\tabto{2cm}$\alpha_0=\frac{\sigma_\text{zul.}}{\eta\cdot\tau_\text{zul.}}$\tabto{4cm}$\sigma=\sigma_\text{b}\pm\sigma_\text{Z/D}$
         \item [] Normalspannungshypothese ($\eta=1$):\\
         $\sigma_v=\frac{\sigma}{2}+\sqrt{\left(\frac{\sigma}{2}\right)^2+\tau^2}$
         \item [] Schubspannungshypothese ($\eta=2$):\\
@@ -314,10 +307,10 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \begin{itemize}[leftmargin=*]
         \item [] $y=\frac{\partial{W}}{\partial{F}}\qquad F=\frac{\partial{W}}{\partial{y}}\qquad \phi=\frac{\partial{W}}{\partial{M}}\qquad M=\frac{\partial{W}}{\partial{\phi}}$\\ \\
         \item [] $y=\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{N_i(x_i)}{E_i\cdot A_i}\cdot \frac{\partial{N_i(x_i)}}{\partial{F}}}\cdot dx_i$
-                $+\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{B_i}(x_i)}{E_i\cdot I_i}\cdot \frac{\partial{M_{B_i}(x_i)}}{\partial{F}}}\cdot dx_i$\\ \\
-                $\quad+\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{T_i}(x_i)}{G_i\cdot I_{p_i}}\cdot \frac{\partial{M_{T_i}(x_i)}}{\partial{F}}}\cdot dx_i$\\ \\ \\
-        \item [] $\phi=\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{B_i}(x_i)}{E_i\cdot I_i}\cdot \frac{\partial{M_{B_i}(x_i)}}{\partial{M}}}\cdot dx_i+
-                \displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{T_i}(x_i)}{G\cdot I_{p_i}}\cdot \frac{\partial{M_{T_i}(x_i)}}{\partial{M}}}\cdot dx_i$
+                $+\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{B}_i}(x_i)}{E_i\cdot I_i}\cdot \frac{\partial{M_{\text{B}_i}(x_i)}}{\partial{F}}}\cdot dx_i$\\ \\
+                $\quad+\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{T}_i}(x_i)}{G_i\cdot I_{\text{p}_i}}\cdot \frac{\partial{M_{\text{T}_i}(x_i)}}{\partial{F}}}\cdot dx_i$\\ \\ \\
+        \item [] $\phi=\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{B}_i}(x_i)}{E_i\cdot I_i}\cdot \frac{\partial{M_{\text{B}_i}(x_i)}}{\partial{M}}}\cdot dx_i+
+                \displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{T}_i}(x_i)}{G\cdot I_{\text{p}_i}}\cdot \frac{\partial{M_{\text{T}_i}(x_i)}}{\partial{M}}}\cdot dx_i$
 \end{itemize}
 \subsubsection{Satz von Menabrea}
 \begin{itemize}[leftmargin=*]
@@ -328,8 +321,8 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \section{Hydromechanik}
 \subsection{Kräfte}
 \begin{itemize}[leftmargin=*]
-        \item [] $F_\text{Druck}=p_{ges}\cdot A_{proj.}$
-        \item [] $p_{stat}=p_0+\rho\cdot g\cdot h$\tabto{3.3cm}$\left[p_{stat}\right]=\text{Pa}$
+        \item [] $F_\text{Druck}=p_\text{ges}\cdot A_\text{proj.}$
+        \item [] $p_\text{stat}=p_0+\rho\cdot g\cdot h$\tabto{3.3cm}$\left[p_\text{stat}\right]=\text{Pa}$
         \item [] $F_\text{Auftr.}=\rho_\text{Fl.}\cdot g\cdot V_\text{verdr.}$\tabto{3.3cm}...Vertikalkomponente (durch Schwp.)
         \item [] $F_\text{H}=\rho\cdot g\cdot h_S\cdot A_\text{proj.}$\tabto{3.3cm}...Horizontalkomponente
 \end{itemize}
@@ -360,12 +353,12 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] \textbf{Streckenverluste:}
         \item [] $h_\text{VS}=\lambda\cdot\frac{l}{d_\text{hydr.}}\cdot\frac{v^2}{2\cdot g}$
         \item [] $d_\text{hydr.}=\frac{4\cdot A}{U_\text{benetzt}}$
-        \item [] $Re=\frac{v\cdot d_\text{hydr.}}{v_K}$\tabto{3cm}$v_K$ ...kinetische Zähigkeit ($v_{\text{H}_2\text{O}}=10^{-6}\frac{\text{m}^2}{\text{s}}$)
+        \item [] $Re=\frac{v\cdot d_\text{hydr.}}{\nu}$\tabto{3cm}$\nu$ ...kinematische Zähigkeit ($\nu_{\text{H}_2\text{O}}=10^{-6}\frac{\text{m}^2}{\text{s}}$)
 \end{itemize}
 
 \subsection{Impulserhaltung und Stützkräfte}
 \begin{itemize}[leftmargin=*]
-        \item [] $|S|=p_{"u}\cdot A+\dot{m}\cdot v$\tabto{3cm}$S$ ...Stützkraft
+        \item [] $|S|=p_{\ddot{\text{u}}}\cdot A+\dot{m}\cdot v$\tabto{3cm}$S$ ...Stützkraft
 \end{itemize}
 
 \section{Thermodynamik}
@@ -384,9 +377,9 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] 2. Hauptsatz der Thermodynamik:\\
                 $ds=\frac{dq}{T}$
         \item [] Arbeit - geschlossenes System:\\
-                $A_v=-\int_{1}^{2}{p\cdot dV}$
+                $A_\text{v}=-\int_{1}^{2}{p\cdot dV}$
         \item [] Arbeit - offenes System:\\
-                $A_t=\int_{1}^{2}{V\cdot dp=H_2-H_1-Q_a}$
+                $A_\text{t}=\int_{1}^{2}{V\cdot dp=H_2-H_1-Q_\text{a}}$
         \item [] Wärme:\\
                 $dQ=dU+p\cdot dV=dH-V\cdot dp$\tabto{5cm}
                 $h=u+p\cdot v$
@@ -401,43 +394,42 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] \textbf{Isochor:} \fbox{$V_1=V_2$} $\qquad n=\infty$
         \subitem $\frac{p_1}{p_2}=\frac{T_1}{T_2}$
         \subitem $q_{12}=u_{12}=c_v\cdot(T_2-T_1)$
-        \subitem $a_t=R\cdot(T_2-T_1)=v\cdot(p_2-p_1)$
-        \subitem $a_v=0$
+        \subitem $a_\text{t}=R\cdot(T_2-T_1)=v\cdot(p_2-p_1)$
+        \subitem $a_\text{v}=0$
         \subitem $s_{12}=c_v\cdot\ln{\left(\frac{T_2}{T_1}\right)}$
         \item [] \textbf{Isobar:} \fbox{$p_1=p_2$} $\qquad n=0$
         \subitem $\frac{V_1}{V_2}=\frac{v_1}{v_2}=\frac{T_1}{T_2}$
         \subitem $q_{12}=h_{12}=c_p\cdot(T_2-T_1)\qquad\rightarrow\text{für Dampf: }q_{12}=h_{12}$
-        \subitem $a_t=0$
-        \subitem $a_v=-R\cdot(T_2-T_1)=-p\cdot(v_2-v_1)$
+        \subitem $a_\text{t}=0$
+        \subitem $a_\text{v}=-R\cdot(T_2-T_1)=-p\cdot(v_2-v_1)$
         \subitem $s_{12}=c_p\cdot\ln{\left(\frac{T_2}{T_1}\right)}$
         \item [] \textbf{Isotherm/Isenthalp:} \fbox{$T_1=T_2$}$\quad$\&$\quad$\fbox{$h_{12}=0$} $\qquad n=1$
         \subitem $\frac{p_1}{p_2}=\frac{v_2}{v_1}=\frac{V_2}{V_1}$
         \subitem $q_{12}=R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}=-R\cdot T\cdot\ln{\left(\frac{v_1}{v_2}\right)}$
-        \subitem $a_t=a_v=-q_{12}=-R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}=R\cdot T\cdot\ln{\left(\frac{v_1}{v_2}\right)}$
-        \subitem $a_v=a_t=-q_{12}=-R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}=R\cdot T\cdot\ln{\left(\frac{v_1}{v_2}\right)}$
+        \subitem $a_\text{t}=a_\text{v}=-q_{12}=-R\cdot T\cdot\ln{\left(\frac{p_1}{p_2}\right)}=R\cdot T\cdot\ln{\left(\frac{v_1}{v_2}\right)}$
         \subitem $s_{12}=R\cdot\ln{\left(\frac{p_1}{p_2}\right)}$
         \item [] \textbf{Isentrop:} \fbox{$S_1=S_2$}$\qquad n=\kappa\quad${\scriptsize(adiabat \& reibungsfrei)}
         \subitem $p_1\cdot v_1^\kappa=p_2\cdot v_2^\kappa$
         \subitem $q_{12}=0$
-        \subitem $a_t=c_p\cdot(T_2-T_1)$
-        \subitem $a_v=c_v\cdot(T_2-T_1)$
+        \subitem $a_\text{t}=c_p\cdot(T_2-T_1)$
+        \subitem $a_\text{v}=c_v\cdot(T_2-T_1)$
         \subitem $s_{12}=0$
         \subitem $\frac{T_2}{T_1}=\left(\frac{p_1}{p_2}\right)^{\frac{1-\kappa}{\kappa}}=\left(\frac{p_2}{p_1}\right)^{\frac{\kappa-1}{\kappa}}=\left(\frac{v_1}{v_2}\right)^{\kappa-1}$
-        \subitem $\kappa=\frac{a_t}{a_v}=\frac{c_p}{c_v}$
+        \subitem $\kappa=\frac{a_\text{t}}{a_\text{v}}=\frac{c_p}{c_v}$
 
 \columnbreak
 %---------------------------------------------------------------------------
 
         \item [] \textbf{Polytrop:}
-        \subitem $p_1\cdot v_1^n=p_2\cdot v_2^n\quad\longrightarrow\quad n=\frac{ln{\left(\frac{p_1}{p_2}\right)}}{\ln{\left(\frac{v_2}{v_1}\right)}}=\frac{a_t}{a_v}$
+        \subitem $p_1\cdot v_1^n=p_2\cdot v_2^n\quad\longrightarrow\quad n=\frac{\ln{\left(\frac{p_1}{p_2}\right)}}{\ln{\left(\frac{v_2}{v_1}\right)}}=\frac{a_\text{t}}{a_\text{v}}$
         \subitem $q_{12}=c_v\cdot\frac{n-\kappa}{n-1}\cdot(T_2-T_1)=\frac{n-\kappa}{(n-1)\cdot(\kappa-1)}\cdot R\cdot(T_2-T_1)$
-        \subitem $a_t=\frac{n}{n-1}\cdot R\cdot(T_2-T_1)=a_v\cdot n$
-        \subitem $a_v=\frac{R}{n-1}\cdot(T_2-T_1)=\frac{a_t}{n}$
+        \subitem $a_\text{t}=\frac{n}{n-1}\cdot R\cdot(T_2-T_1)=a_\text{v}\cdot n$
+        \subitem $a_\text{v}=\frac{R}{n-1}\cdot(T_2-T_1)=\frac{a_\text{t}}{n}$
         \subitem $s_{12}=c_v\cdot\frac{n-\kappa}{n-1}\cdot\ln{\left(\frac{T_2}{T_1}\right)}=\frac{R}{\kappa-1}\cdot\frac{n-\kappa}{n-1}\cdot\ln{\left(\frac{T_2}{T_1}\right)}$
-        \subitem Expansion:\tabto{2.4cm}$n<\kappa\longrightarrow$ Wäreme\textbf{zu}fuhr
-                           \tabto{2.4cm}$n>\kappa\longrightarrow$ Wäreme\textbf{ab}fuhr
-        \subitem Kompression:\tabto{2.4cm}$n>\kappa\longrightarrow$ Wäreme\textbf{zu}fuhr
-                             \tabto{2.4cm}$n<\kappa\longrightarrow$ Wäreme\textbf{ab}fuhr
+        \subitem Expansion:\tabto{2.4cm}$n<\kappa\longrightarrow$ Wärme\textbf{zu}fuhr
+                           \tabto{2.4cm}$n>\kappa\longrightarrow$ Wärme\textbf{ab}fuhr
+        \subitem Kompression:\tabto{2.4cm}$n>\kappa\longrightarrow$ Wärme\textbf{zu}fuhr
+                             \tabto{2.4cm}$n<\kappa\longrightarrow$ Wärme\textbf{ab}fuhr
 \end{itemize}
 
 \subsection{spezifische Wärmekapazitäten}
@@ -449,12 +441,12 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \subsection{Kreisprozesse}
 \begin{itemize}[leftmargin=*]
         \item [] \textbf{Rechtsläufige Kreisprozesse:}\\
-        $\eta_{th}=\frac{|A|}{Q_{zu}}=\frac{q_{zu}-|q_{ab}|}{q_{zu}}\qquad\quad A_{KP}=-(Q_{zu}-|Q_{ab}|)\qquad\quad P=A\cdot\dot{m}$
+        $\eta_\text{th}=\frac{|A|}{Q_\text{zu}}=\frac{q_\text{zu}-|q_\text{ab}|}{q_\text{zu}}\qquad\quad A_\text{KP}=-(Q_\text{zu}-|Q_\text{ab}|)\qquad\quad P=A\cdot\dot{m}$
         \item [] \textbf{Isentrope Wirkungsgrade:}\\
-        $\eta_{is\text{V}}=\frac{h_{2s}-h_1}{h_2-h_1}$\tabto{2.5cm}$\eta_{is\text{T}}=\frac{h_2-h_1}{h_{2s}-h_1}$\\ \\
-        {\scriptsize$\quad$ für ideales Gas $\rightarrow\quad\eta_{is\text{V}}=\frac{T_{2s}-T_1}{T_2-T_1}\quad\eta_{is\text{T}}=\frac{T_2-T_1}{T_{2s}-T_1}$}
+        $\eta_{\text{is,V}}=\frac{h_{2\text{s}}-h_1}{h_2-h_1}$\tabto{2.5cm}$\eta_{\text{is,T}}=\frac{h_2-h_1}{h_{2\text{s}}-h_1}$\\ \\
+        {\scriptsize$\quad$ für ideales Gas $\rightarrow\quad\eta_{\text{is,V}}=\frac{T_{2\text{s}}-T_1}{T_2-T_1}\quad\eta_{\text{is,T}}=\frac{T_2-T_1}{T_{2\text{s}}-T_1}$}
         \item [] \textbf{Linksläufige Kreisprozesse:}\\
-        $\epsilon_{KM}=\frac{q_{zu}}{q_{ab}-q_{zu}}$\tabto{2.5cm}$\epsilon_{WP}=\frac{q_{ab}}{q_{ab}-q_{zu}}$
+        $\epsilon_\text{KM}=\frac{q_\text{zu}}{q_\text{ab}-q_\text{zu}}$\tabto{2.5cm}$\epsilon_\text{WP}=\frac{q_\text{ab}}{q_\text{ab}-q_\text{zu}}$
         %[!]TODO: "KM" und "WP"?? ^^
         \item [] \textbf{Dampfprozesse:}\\
         kein $h_{12}=c_p\cdot T_{12}\quad\Rightarrow$ Tabelle\\
@@ -467,7 +459,7 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] $h(x)=h'+x\cdot(h''-h')=h'+x\cdot r$
         \item [] $v(x)=v'+x\cdot(v''-v')$
         \item [] $s(x)=s'+x\cdot(s''-s')$
-        \item [] unter der Nassdampfkurve gilt \textbf{nicht} $h_{12}=c_p\cdot (T_2-T_1))$
+        \item [] unter der Nassdampfkurve gilt \textbf{nicht} $h_{12}=c_p\cdot (T_2-T_1)$
 \end{itemize}
 
 \columnbreak
@@ -498,8 +490,8 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 
 \subsection{Geschwindigkeiten und Beschleunigungen bei Drehbewegungen}
 \begin{itemize}[leftmargin=*]
-        \item [] $v_r=\dot{r}$\tabto{2cm}$a_r=\ddot{r}-r\cdot\dot{\phi}^2$
-        \item [] $v_t=r\cdot\dot{\phi}$\tabto{2cm}$a_t=r\cdot\ddot{\phi}+2\cdot\dot{r}\cdot\dot{\phi}$
+        \item [] $v_\text{r}=\dot{r}$\tabto{2cm}$a_\text{r}=\ddot{r}-r\cdot\dot{\phi}^2$
+        \item [] $v_\text{t}=r\cdot\dot{\phi}$\tabto{2cm}$a_\text{t}=r\cdot\ddot{\phi}+2\cdot\dot{r}\cdot\dot{\phi}$
 \end{itemize}
 
 \subsection{Absolutgeschwindigkeit \& Absolutbeschleunigung}
@@ -528,23 +520,23 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] \textbf{potentielle Energie:}\\$E_\text{pot}=W_\text{pot}=m\cdot g\cdot h$
         \item [] \textbf{kinetische Energie:}\\$E_\text{transl}=W_\text{transl}=\frac{m\cdot v^2}{2}\qquad E_\text{rot}=W_\text{rot}=\frac{J\cdot\omega^2}{2}$
         \item [] \textbf{Federenergie:}\\$E_\text{el}=W_\text{el}=\frac{c\cdot(s_1^2-s_2^2)}{2}=\frac{c\cdot(\phi_1^2-\phi_2^2)}{2}$
-        \item [] \textbf{Reibungsenergie:}\\$E_\text{reib}=W_\text{reib}=F_N\cdot\mu\cdot s$
-        \item [] \textbf{Massenreduktion:}\\$m_{red}\cdot\frac{v_{red}^2}{2}=J_{red}\cdot\frac{\omega_{red}^2}{2}=\sum{E_\text{kin}}$
+        \item [] \textbf{Reibungsenergie:}\\$E_\text{reib}=W_\text{reib}=F_\text{N}\cdot\mu\cdot s$
+        \item [] \textbf{Massenreduktion:}\\$m_\text{red}\cdot\frac{v_\text{red}^2}{2}=J_\text{red}\cdot\frac{\omega_\text{red}^2}{2}=\sum{E_\text{kin}}$
         \item [] \textbf{Leistung:}\\$P=F\cdot v=M\cdot\omega=\frac{F\cdot s}{t}$
 \end{itemize}
 
 \subsection{Impuls \& Stoß}
-\textbf{Impulserhaltung:}\tabto{3cm}$m_1\cdot\vec{v_1}=m_2\cdot\vec{v_2}=\text{konst.}$\\
+\textbf{Impulserhaltung:}\tabto{3cm}$m_1\cdot\vec{v_1}+m_2\cdot\vec{v_2}=m_1\cdot\vec{v_1}'+m_2\cdot\vec{v_2}'$\\
 \textbf{Stoß:}
 \begin{itemize}[leftmargin=*]
         \item [] $u=\frac{m_{1\text{red}}\cdot v_1+m_{2\text{red}}\cdot v_2}{m_{1\text{red}}+m_{2\text{red}}}$
-        \item [] $s_{K1}=m_1\cdot(u-v_1)\qquad s_{R1}=m_1\cdot(v_1'-u)$
-        \item [] $s_{K2}=m_2\cdot(u-v_2)\qquad s_{R2}=m_2\cdot(v_2'-u)$
-        \item [] $k=\frac{s_{R1}}{s_{K1}}=\frac{s_{R2}}{s_{K2}}=\frac{u-v_1'}{v_1-u}=\frac{v_2'-u}{u-v_2}\quad\longrightarrow\quad v_i'=(1+k)\cdot u-v_i\cdot k$\\ \\
+        \item [] $s_{\text{K}1}=m_1\cdot(u-v_1)\qquad s_{\text{R}1}=m_1\cdot(v_1'-u)$
+        \item [] $s_{\text{K}2}=m_2\cdot(u-v_2)\qquad s_{\text{R}2}=m_2\cdot(v_2'-u)$
+        \item [] $k=\frac{s_{\text{R}1}}{s_{\text{K}1}}=\frac{s_{\text{R}2}}{s_{\text{K}2}}=\frac{u-v_1'}{v_1-u}=\frac{v_2'-u}{u-v_2}\quad\longrightarrow\quad v_i'=(1+k)\cdot u-v_i\cdot k$\\ \\
         \subitem {\scriptsize $v_i$\tabto{1cm}...Geschwindigkeit von Masse $i$ vor dem Stoß}
         \subitem {\scriptsize $v_i'$\tabto{1cm}...Geschwindigkeit von Masse $i$ nach dem Stoß}
         \subitem {\scriptsize $u$\tabto{1cm}...gemeinsame Geschwindigkeit während der Kompressionsphase}
-        \item [] $E_\text{kin0}+E_\text{pot0}-E_v=E_\text{kin1}+E_\text{pot1}\qquad\qquad E_v$ ...Verformungsenergie
+        \item [] $E_\text{kin0}+E_\text{pot0}-E_v=E_\text{kin1}+E_\text{pot1}\qquad E_v$ ...Verformungsenergie
 \end{itemize}
 
 \columnbreak
@@ -553,10 +545,11 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \textbf{freie ungedämpfte Schwingung}
 \begin{itemize}[leftmargin=*]
         \item [] $\ddot{\variant{x}}+\omega^2\cdot\variant{x}=0\qquad\qquad m\cdot\ddot{\variant{x}}+c\cdot\variant{x}=0$
+        \item [] $\omega=\sqrt{\frac{c}{m}}\quad\left(\text{Drehschw.: }\sqrt{\frac{c_T}{J}}\right)\qquad f=\frac{\omega}{2\pi}\qquad T=\frac{1}{f}=\frac{2\pi}{\omega}$
         \item [] $\variant{x}(t)=A\cdot\sin(\omega\cdot t)+B\cdot\cos(\omega\cdot t)\qquad$bzw.$\qquad\variant{x}(t)=C\cdot\sin(\omega\cdot t+\psi)$
         \item [] $\quad\longrightarrow\quad A$ \& $B\quad\Leftarrow\quad$ aus Randbedingungen ermitteln
         \item [] $\quad\longrightarrow\quad C=\sqrt{A^2+B^2}$
-        \item [] $\quad\longrightarrow\quad\psi=\arctan\left(\frac{A}{B}\right)$
+        \item [] $\quad\longrightarrow\quad\psi=\arctan\left(\frac{B}{A}\right)$
 \end{itemize}
 
 \vspace{20pt}
@@ -564,16 +557,17 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \textbf{freie gedämpfte Schwingung}
 \begin{itemize}[leftmargin=*]
         \item [] $\ddot{\variant{x}}+2\delta\cdot\dot{\variant{x}}+\omega^2\cdot\variant{x}=0$
+        \item [] $\delta=\frac{k}{2m}\qquad D=\frac{\delta}{\omega}\quad$ {\scriptsize(Lehrsches Dämpfungsmaß; $D<1$ schwach)}
         \item [] schwache Dämpfung: \fbox{$\delta^2<\omega^2$}
-        \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot\left( A\cdot\sin(\omega_d\cdot t)+B\cdot\cos(\omega_d\cdot t)\right)$
+        \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot\left( A\cdot\sin(\omega_\text{d}\cdot t)+B\cdot\cos(\omega_\text{d}\cdot t)\right)$
         \subitem \tabto{1.8cm}bzw.
-        \subitem $\variant{x}(t)=C\cdot e^{-\delta\cdot t}\cdot\sin(\omega_d\cdot t+\psi)$
-        \subitem $\quad\longrightarrow\quad\omega_d=\sqrt{\omega^2-\delta^2}$
+        \subitem $\variant{x}(t)=C\cdot e^{-\delta\cdot t}\cdot\sin(\omega_\text{d}\cdot t+\psi)$
+        \subitem $\quad\longrightarrow\quad\omega_\text{d}=\sqrt{\omega^2-\delta^2}$
         \subitem $\quad\longrightarrow\quad A$ \& $B\quad\Leftarrow\quad$ aus Randbedingungen ermitteln
         \subitem $\quad\longrightarrow\quad C=\sqrt{A^2+B^2}$
-        \subitem $\quad\longrightarrow\quad\psi=\arctan\left(\frac{A}{B}\right)$
+        \subitem $\quad\longrightarrow\quad\psi=\arctan\left(\frac{B}{A}\right)$
         \item [] starke Dämpfung: \fbox{$\delta^2>\omega^2$}
-        \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot\left(A\cdot e^{\sqrt{\delta^2-\omega^2}\cdot t}+B\cdot e^{\sqrt{\delta^2-\omega^2}\cdot t}\right)$
+        \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot\left(A\cdot e^{\sqrt{\delta^2-\omega^2}\cdot t}+B\cdot e^{-\sqrt{\delta^2-\omega^2}\cdot t}\right)$
         \item [] aperiodischer Grenzfall: \fbox{$\delta^2=\omega^2$}
         \subitem $\variant{x}(t)=e^{-\delta\cdot t}\cdot(A+B\cdot t)$
 \end{itemize}
@@ -584,10 +578,10 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 
 \textbf{erzwungene Schwingung}
 \begin{itemize}[leftmargin=*]
-        \item [] $\ddot{\variant{x}}+2\delta\cdot\dot{\variant{x}}+\omega^2\cdot\variant{x}=A_e\cdot\sin(\Omega\cdot t)$\tabto{5.1cm}oder$\quad\dots=A_e\cdot\cos(\Omega\cdot t)$
+        \item [] $\ddot{\variant{x}}+2\delta\cdot\dot{\variant{x}}+\omega^2\cdot\variant{x}=A_\text{e}\cdot\sin(\Omega\cdot t)$\tabto{5.1cm}oder$\quad\dots=A_\text{e}\cdot\cos(\Omega\cdot t)$
         \item [] $x_p(t)=C\cdot\sin(\Omega\cdot t+\psi)$\tabto{5.1cm}oder$\quad\dots=C\cdot\cos(\Omega\cdot t+\psi)$
-        \item [] $\quad\longrightarrow\quad C=\frac{A_e}{\sqrt{(\omega^2-\Omega^2)^2+4\cdot\delta^2\cdot\Omega^2}}$
-        \item [] $\quad\longrightarrow\quad\psi=\arctan(\frac{2\cdot\delta\cdot\Omega}{\omega^2-\Omega^2})\qquad$ für $\psi<0$: $\quad\psi_{neu}=\psi+\pi$
+        \item [] $\quad\longrightarrow\quad C=\frac{A_\text{e}}{\sqrt{(\omega^2-\Omega^2)^2+4\cdot\delta^2\cdot\Omega^2}}$
+        \item [] $\quad\longrightarrow\quad\psi=\arctan(\frac{2\cdot\delta\cdot\Omega}{\omega^2-\Omega^2})\qquad$ für $\psi<0$: $\quad\psi_\text{neu}=\psi+\pi$
         \item [] \vspace{7pt}{\scriptsize$\omega_\text{max}=\sqrt{\omega^2-2\delta^2}$}
         \item [] {\scriptsize wenn $\Omega=\omega_\text{max}\quad\rightarrow\quad$Resonanz}
 \end{itemize}
@@ -600,21 +594,25 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
         \item [] $c_\text{ers,seriell}=\frac{1}{\sum_{i}^{n}\frac{1}{c_i}}=\frac{1}{\frac{1}{c_1}+\frac{1}{c_2}+\cdots}$
 \end{itemize}
 
-\par\vfill\null
-\columnbreak
-%---------------------------------------------------------------------------
-
- 
+%\vspace{10pt}
 \vfill
 
+\setcounter{tocdepth}{2}
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
+\makeatother
+\tableofcontents
 
-\tabto{6.3cm}\rule{0.3\linewidth}{0.25pt}\\
+\vfill
+
+\rule{1\linewidth}{0.25pt}\\
 \tiny
-\tabto{6.3cm}\href{http://wch.github.io/latexsheet/}{http://wch.github.io/latexsheet/}\\
-\tabto{6.3cm}Copyright \copyright\ 2014 Winston Chang\\
-\tabto{6.3cm}Copyright \copyright\ \the\year\ Tobias Mittermair
+Copyright \copyright\ \the\year\ Tobias Mittermair
+\href{https://github.com/Tobias-0112358132134/HTL_TMB-Formelsammlung}{github.com/Tobias-0112358132134/HTL\_TMB-Formelsammlung}\\
+Copyright \copyright\ 2014 Winston Chang\\
+\href{https://wch.github.io/latexsheet/}{http://wch.github.io/latexsheet/}\\
 \begin{flushright}
-        {\normalsize V1.4}\\
+        {\normalsize V1.5}\\
 \end{flushright}
 
 
