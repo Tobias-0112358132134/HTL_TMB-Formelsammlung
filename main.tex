@@ -75,6 +75,7 @@
                                 {\normalfont\small\bfseries}}
 \makeatother
 \newcommand*\variant[1]{\bar{#1}}
+\newcommand*\diff{\mathrm{d}}
 
 % Define BibTeX command
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
@@ -140,14 +141,14 @@
 
 \section{Festigkeitslehre}
 \begin{itemize}[leftmargin=*]
-        \item [] Flächenschwerpunkt\tabto{3cm} $x_S=\frac{\sum x_i\cdot A_i}{\sum A_i}=\frac{1}{A}\cdot\int x\cdot dA $
+        \item [] Flächenschwerpunkt\tabto{3cm} $x_S=\frac{\sum x_i\cdot A_i}{\sum A_i}=\frac{1}{A}\cdot\int x\cdot \diff A $
 \end{itemize}
 
 \subsection{Flächenmomente und Deviationsmomente}
 \begin{itemize}[leftmargin=*]
-        \item [] Flächenmomente\tabto{2.7cm} $I_y=\int z^2\cdot dA$\\
-        \tabto{2.7cm}$I_z=\int y^2\cdot dA$
-        \item [] Deviationsmomente\tabto{2.7cm} $I_{yz}=\int y\cdot z\cdot dA$\\
+        \item [] Flächenmomente\tabto{2.7cm} $I_y=\int z^2\cdot \diff A$\\
+        \tabto{2.7cm}$I_z=\int y^2\cdot \diff A$
+        \item [] Deviationsmomente\tabto{2.7cm} $I_{yz}=\int y\cdot z\cdot \diff A$\\
         \tabto{2.7cm}{\scriptsize negatives Vorzeichen in SE}
         \item [] polares Flächenmoment\tabto{3.4cm} $I_\text{p}=I_y+I_z$
 \end{itemize}
@@ -175,9 +176,9 @@
 \end{itemize}
 
 \subsubsection{Schnittgrößen}
-\tabto{0.35cm}$Q(x_i)=Q_0\pm\int_0^{x_i}{q(x)\cdot dx}$\tabto{4.5cm}$Q(x_{M_\text{max}})=0\quad\longrightarrow\quad x_{M_\text{max}}$
-\tabto{0.35cm}$M(x_i)=M_0\mp\int_0^{x_i}{Q(x)\cdot dx}$\tabto{4.5cm}$M_\text{max}=M(x_{M_\text{max}})$
-\tabto{0.35cm}$M_\text{Streckenl.}(x_i)=\int_{0}^{x_i}{q(x)\cdot x\cdot dx}$
+\tabto{0.35cm}$Q(x_i)=Q_0\pm\int_0^{x_i}{q(x)\cdot \diff x}$\tabto{4.5cm}$Q(x_{M_\text{max}})=0\quad\longrightarrow\quad x_{M_\text{max}}$
+\tabto{0.35cm}$M(x_i)=M_0\mp\int_0^{x_i}{Q(x)\cdot \diff x}$\tabto{4.5cm}$M_\text{max}=M(x_{M_\text{max}})$
+\tabto{0.35cm}$M_\text{Streckenl.}(x_i)=\int_{0}^{x_i}{q(x)\cdot x\cdot \diff x}$
 
 \columnbreak
 %---------------------------------------------------------------------------
@@ -306,11 +307,11 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \subsection{Satz von Castigliano}
 \begin{itemize}[leftmargin=*]
         \item [] $y=\frac{\partial{W}}{\partial{F}}\qquad F=\frac{\partial{W}}{\partial{y}}\qquad \phi=\frac{\partial{W}}{\partial{M}}\qquad M=\frac{\partial{W}}{\partial{\phi}}$\\ \\
-        \item [] $y=\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{N_i(x_i)}{E_i\cdot A_i}\cdot \frac{\partial{N_i(x_i)}}{\partial{F}}}\cdot dx_i$
-                $+\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{B}_i}(x_i)}{E_i\cdot I_i}\cdot \frac{\partial{M_{\text{B}_i}(x_i)}}{\partial{F}}}\cdot dx_i$\\ \\
-                $\quad+\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{T}_i}(x_i)}{G_i\cdot I_{\text{p}_i}}\cdot \frac{\partial{M_{\text{T}_i}(x_i)}}{\partial{F}}}\cdot dx_i$\\ \\ \\
-        \item [] $\phi=\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{B}_i}(x_i)}{E_i\cdot I_i}\cdot \frac{\partial{M_{\text{B}_i}(x_i)}}{\partial{M}}}\cdot dx_i+
-                \displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{T}_i}(x_i)}{G\cdot I_{\text{p}_i}}\cdot \frac{\partial{M_{\text{T}_i}(x_i)}}{\partial{M}}}\cdot dx_i$
+        \item [] $y=\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{N_i(x_i)}{E_i\cdot A_i}\cdot \frac{\partial{N_i(x_i)}}{\partial{F}}}\cdot \diff x_i$
+                $+\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{B}_i}(x_i)}{E_i\cdot I_i}\cdot \frac{\partial{M_{\text{B}_i}(x_i)}}{\partial{F}}}\cdot \diff x_i$\\ \\
+                $\quad+\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{T}_i}(x_i)}{G_i\cdot I_{\text{p}_i}}\cdot \frac{\partial{M_{\text{T}_i}(x_i)}}{\partial{F}}}\cdot \diff x_i$\\ \\ \\
+        \item [] $\phi=\displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{B}_i}(x_i)}{E_i\cdot I_i}\cdot \frac{\partial{M_{\text{B}_i}(x_i)}}{\partial{M}}}\cdot \diff x_i+
+                \displaystyle{\sum_i{\int_{0}^{l_i}}}{\frac{M_{\text{T}_i}(x_i)}{G\cdot I_{\text{p}_i}}\cdot \frac{\partial{M_{\text{T}_i}(x_i)}}{\partial{M}}}\cdot \diff x_i$
 \end{itemize}
 \subsubsection{Satz von Menabrea}
 \begin{itemize}[leftmargin=*]
@@ -373,15 +374,15 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \subsection{Hauptsätze der Thermodynamik}
 \begin{itemize}[leftmargin=*]
         \item [] 1. Hauptsatz der Thermodynamik:\\
-                $dQ+dA=(dEa)+dU$
+                $\diff Q+\diff A=(\diff E_\text{a})+\diff U$
         \item [] 2. Hauptsatz der Thermodynamik:\\
-                $ds=\frac{dq}{T}$
+                $\diff s=\frac{\diff q}{T}$
         \item [] Arbeit - geschlossenes System:\\
-                $A_\text{v}=-\int_{1}^{2}{p\cdot dV}$
+                $A_\text{v}=-\int_{1}^{2}{p\cdot \diff V}$
         \item [] Arbeit - offenes System:\\
-                $A_\text{t}=\int_{1}^{2}{V\cdot dp=H_2-H_1-Q_\text{a}}$
+                $A_\text{t}=\int_{1}^{2}{V\cdot \diff p=H_2-H_1-Q_\text{a}}$
         \item [] Wärme:\\
-                $dQ=dU+p\cdot dV=dH-V\cdot dp$\tabto{5cm}
+                $\diff Q=\diff U+p\cdot \diff V=\diff H-V\cdot \diff p$\tabto{5cm}
                 $h=u+p\cdot v$
 \end{itemize}
 
@@ -434,14 +435,14 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 
 \subsection{spezifische Wärmekapazitäten}
 \begin{itemize}[leftmargin=*]
-        \item [] $du=c_v\cdot dT$
-        \item [] $dh=c_p\cdot dT$
+        \item [] $\diff u=c_v\cdot \diff T$
+        \item [] $\diff h=c_p\cdot \diff T$
 \end{itemize}
 
 \subsection{Kreisprozesse}
 \begin{itemize}[leftmargin=*]
         \item [] \textbf{Rechtsläufige Kreisprozesse:}\\
-        $\eta_\text{th}=\frac{|A|}{Q_\text{zu}}=\frac{q_\text{zu}-|q_\text{ab}|}{q_\text{zu}}\qquad\quad A_\text{KP}=-(Q_\text{zu}-|Q_\text{ab}|)\qquad\quad P=A\cdot\dot{m}$
+        $\eta_\text{th}=\frac{|A|}{Q_\text{zu}}=\frac{q_\text{zu}-|q_\text{ab}|}{q_\text{zu}}\qquad A_\text{KP}=-(Q_\text{zu}-|Q_\text{ab}|)\qquad P=A\cdot\dot{m}$
         \item [] \textbf{Isentrope Wirkungsgrade:}\\
         $\eta_{\text{is,V}}=\frac{h_{2\text{s}}-h_1}{h_2-h_1}$\tabto{2.5cm}$\eta_{\text{is,T}}=\frac{h_2-h_1}{h_{2\text{s}}-h_1}$\\ \\
         {\scriptsize$\quad$ für ideales Gas $\rightarrow\quad\eta_{\text{is,V}}=\frac{T_{2\text{s}}-T_1}{T_2-T_1}\quad\eta_{\text{is,T}}=\frac{T_2-T_1}{T_{2\text{s}}-T_1}$}
@@ -516,7 +517,7 @@ polare Flächenträgheitsmomente und Widerstandsmomente:
 \subsection{Energie \& Arbeit}
 \begin{itemize}[leftmargin=*]
         \item [] $E_1+W_{zu}-W_{ab}=E_2$
-        \item [] $W=\int{F\cdot ds}=\int{M\cdot d\phi}$
+        \item [] $W=\int{F\cdot \diff s}=\int{M\cdot \diff \phi}$
         \item [] \textbf{potentielle Energie:}\\$E_\text{pot}=W_\text{pot}=m\cdot g\cdot h$
         \item [] \textbf{kinetische Energie:}\\$E_\text{transl}=W_\text{transl}=\frac{m\cdot v^2}{2}\qquad E_\text{rot}=W_\text{rot}=\frac{J\cdot\omega^2}{2}$
         \item [] \textbf{Federenergie:}\\$E_\text{el}=W_\text{el}=\frac{c\cdot(s_1^2-s_2^2)}{2}=\frac{c\cdot(\phi_1^2-\phi_2^2)}{2}$
